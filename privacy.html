@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 700px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  code { background: #f2f2f2; padding: 0.1em 0.3em; border-radius: 3px; }
+  .updated { color: #666; font-size: 0.9rem; }
+  a { color: #0060df; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: August 4, 2026</p>
+
+<p>This app is a local-first Mac app. It processes your podcast subscriptions
+on your device and does not operate a server, does not require an account,
+and does not collect analytics or usage data of any kind.</p>
+
+<h2>What happens on your device</h2>
+<p>When you subscribe to a show, the app downloads its episode feed and
+audio, transcribes it locally using on-device speech recognition, and
+extracts claims, predictions, and entities from the transcript &mdash; all on
+your Mac. None of this is uploaded anywhere. Your transcript cache and
+claim index are stored locally in your user data directory and are never
+transmitted to us, because we don't operate any servers.</p>
+
+<h2>Network requests the app makes</h2>
+<p>The app is not fully offline &mdash; it makes network requests directly to
+third parties on your behalf, never through a server we control:</p>
+<ul>
+  <li><strong>Podcast feeds and audio</strong> &mdash; fetched directly from the RSS
+    feed URL and audio host each show publishes, so it can transcribe
+    episodes.</li>
+  <li><strong>Publisher-supplied transcripts</strong> &mdash; when a show's feed
+    includes a Podcasting 2.0 <code>podcast:transcript</code> tag, the
+    transcript file is fetched directly from the host the publisher
+    specifies.</li>
+  <li><strong>iTunes Search API (Apple)</strong> &mdash; used for podcast discovery
+    and subscribe search, to look up podcasts by name.</li>
+  <li><strong>On-device speech model files</strong> &mdash; downloaded once,
+    directly from Hugging Face, the first time you transcribe locally, so
+    speech recognition can run on-device thereafter.</li>
+  <li><strong>Notion API</strong> &mdash; only if you use the optional
+    "Export to Notion" feature, and only when you trigger it. Requires
+    you to supply your own Notion integration token in Settings; nothing
+    is sent to Notion unless you initiate an export.</li>
+  <li><strong>Reminders (EventKit, on-device, not network)</strong> &mdash; only if
+    you use the optional "Add Reminder" export action on a claim. This
+    stays entirely on your Mac via Apple's Reminders framework.</li>
+</ul>
+<p>None of these requests pass through any server operated by us. We have
+no backend, no analytics SDK, and no crash reporter.</p>
+
+<h2>Data we collect</h2>
+<p>None. We do not collect, store, or have access to any of your data
+&mdash; your subscriptions, transcripts, claims, or exports never leave your
+Mac except when you explicitly export to Notion or Reminders, both of
+which go directly from your device to the third party you chose.</p>
+
+<h2>Third-party services</h2>
+<p>Your use of the iTunes Search API is subject to
+<a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.
+Your use of the optional Notion export is subject to
+<a href="https://www.notion.so/privacy">Notion's privacy policy</a>.
+Speech-recognition model downloads are static model files and do not
+involve any of your podcast data.</p>
+
+<h2>Children's privacy</h2>
+<p>This app is not directed at children and does not knowingly collect
+data from anyone, including children, because it does not collect data
+at all.</p>
+
+<h2>Changes to this policy</h2>
+<p>If the app's data flows change in a future version, this policy will
+be updated and the update will be reflected in the "Last updated" date
+above.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:orenssegal@gmail.com">orenssegal@gmail.com</a></p>
+
+<p><a href="index.html">&larr; Back</a></p>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 700px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  a { color: #0060df; }
+  .contact { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #ddd; }
+</style>
+</head>
+<body>
+<h1>Support</h1>
+<p>Answers to common questions. If yours isn't covered, email us &mdash;
+see the bottom of this page.</p>
+
+<h2>A podcast I subscribed to isn't showing up / isn't updating</h2>
+<p>The app fetches each show's RSS feed directly, so this is usually one
+of:</p>
+<ul>
+  <li>The feed URL is wrong or the show has moved to a new feed &mdash;
+    try re-adding it from the show's current feed link.</li>
+  <li>The feed is temporarily unreachable &mdash; try again in a few
+    minutes.</li>
+  <li>The episode hasn't finished processing yet &mdash; transcription and
+    extraction run on-device and can take a while for long episodes,
+    especially the first one after a fresh transcription-model
+    download.</li>
+</ul>
+
+<h2>Episode ingestion failed or got stuck</h2>
+<p>Ingestion runs entirely on your Mac (no server on our end to check).
+If a single episode fails, it's usually a bad or missing audio URL in
+that episode's feed entry, or an interrupted download &mdash; retrying
+the show usually resolves it. If every episode across every show fails,
+check your Mac's network connection first.</p>
+
+<h2>The on-device speech-recognition model won't download / download is stuck</h2>
+<p>The first time you transcribe locally, the app downloads a
+speech-recognition model file directly from Hugging Face. If this
+download fails or stalls:</p>
+<ul>
+  <li>Check your internet connection and retry &mdash; the app shows
+    download progress and will surface an error if the download fails
+    outright.</li>
+  <li>A firewall or network policy blocking Hugging Face's domains will
+    prevent this download; allow-list it or try a different network.</li>
+  <li>If a show's feed already includes a publisher-supplied transcript,
+    the app uses that directly and skips local transcription entirely
+    &mdash; no model download needed for that show.</li>
+</ul>
+
+<h2>Subscription / free tier questions</h2>
+<ul>
+  <li><strong>What's free?</strong> On-device extraction, browsing your
+    claims, Ask, Predictions, and contradiction detection &mdash; for a
+    small number of actively-tracked shows.</li>
+  <li><strong>What does the subscription unlock?</strong> Unlimited
+    tracked shows, bulk back-catalog backfill, and scoreboard/monthly
+    recap share cards.</li>
+  <li><strong>My subscription isn't being recognized.</strong> Restart
+    the app first &mdash; entitlement status is checked shortly after
+    launch and can lag by a few seconds. If it still doesn't reflect
+    your purchase, use the "Restore Purchases" option in Settings, or
+    email us with your purchase date.</li>
+</ul>
+
+<h2>Cloud (BYO-LLM) verification</h2>
+<p>Cloud verification is bring-your-own-model: you supply your own API
+key/model in Settings, and verification calls go directly from your Mac
+to the provider you configured. We don't run our own verification
+service and don't see your key or your data.</p>
+
+<div class="contact">
+<h2>Still stuck?</h2>
+<p>Email <a href="mailto:orenssegal@gmail.com">orenssegal@gmail.com</a>
+with what you were doing and, if you can, the show/episode involved.</p>
+</div>
+
+<p><a href="index.html">&larr; Back</a></p>
+</body>
+</html>
